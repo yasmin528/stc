@@ -1,0 +1,120 @@
+@use '../../../../public/assets/styles/variables' as *;
+@use '../../../../public/assets/styles/reset' as *;
+
+a{
+    color: $link-btn-color;
+}
+button{
+    color: $third-font-color;
+     background-color: $link-btn-color;
+}
+.login {
+    background-image: url("/assets/images/background.png");
+    background-size: cover;
+    background-position: bottom right;
+    padding-bottom: 240px;
+}
+
+.login-image-holder{
+    background-color: $primary-color;
+    height: 533px;
+    img{
+        height: 84%;
+        position: relative;
+        width: 100%;
+        top: 8%;
+    }
+}
+
+.login-card{
+    border: 1px solid $border-color;
+    border-radius: 32px;
+    background-color: $background-color;
+    margin-top: 113px;
+    font-family: $font-family-regular;
+    .login-card-info {
+        height: 100%;
+        .login-card-info-title{
+            font-family: $font-family-extraBold;
+        }
+        .login-card-info-name{
+           color: $primary-color;
+        }
+        .login-card-info-job-title{
+            color: $secondary-font-color;
+        }
+    }
+    .login-card-actions{
+        a{
+            color: $primary-font-color;
+        }
+    }
+}
+
+.OTP-dialog{
+    .OTP-dialog-title{
+        color: $primary-font-color;
+        font-family: $font-family-extraBold;
+    }
+    .OTP-dialog-email{
+        color: $secondary-font-color;
+        font-family: $font-family-regular;
+        span{
+            font-family: $font-family-extraBold;
+        }
+    }
+    input {
+        background-color: $input-background;
+        font-family: $font-family-extraBold;
+        border: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 36px;
+        cursor: not-allowed;
+        pointer-events: none;
+        width: 100%;
+        &:focus ,&.filled{
+            border-color: #00C48C;
+        }
+        &.not-filled{
+            border-color: red;
+        }
+    }   
+}
+
+.service-dialog{
+    .service-dialog-title{
+        color: $primary-font-color;
+        font-family: $font-family-extraBold;
+    }
+    .service-dialog-list-title{
+        color: $secondary-font-color;
+        font-family: $font-family-regular;
+    }
+    a{
+        color: $primary-font-color;
+        cursor: pointer;
+    }
+    p-checkbox {
+        color: $primary-font-color;
+        p-checkbox-box p-highlight {
+            border-color: #1e2021;
+            background: #f3213a;
+        }
+    }
+    ::ng-deep .p-checkbox-box{
+        border-color: $primary-color;
+        box-shadow: none;
+    }
+    ::ng-deep .p-checkbox-box.p-highlight {
+        background-color: $primary-color !important;
+    }   
+
+}
+
+.OTP-dialog , .service-dialog{
+    i{
+        color: $link-btn-color;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,57 @@
+<section class="flex ">
+    <app-aside-nav [activeIndex]="0"></app-aside-nav>
+    <div class="w-full px-5">
+        <div class="w-full">
+            <app-welcome-user [page]="'home'"></app-welcome-user>
+        </div>
+        <div class="flex flex-row ">
+            <div class="flex-grow-1 mt-6 mr-7">
+                <div class="home-menu">
+                    <ul class="list-none text-xl flex flex-row gap-5 line-height-2 font-family-regular font-medium">
+                        <li
+                                *ngFor="let item of menuItems; let i = index"
+                                [class.active]="activeIndex === i"
+                                (click)="setActive(i)"
+                            >
+                                <a >{{ item }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content ml-6 mt-6 ml-2">
+                    <ng-container *ngIf="activeIndex === 0">
+                        <app-trend></app-trend>
+                    </ng-container>
+                    <ng-container *ngIf="activeIndex === 1">
+                        <app-followed-topics></app-followed-topics>
+                    </ng-container>
+                    <ng-container *ngIf="activeIndex === 2">
+                        <app-latest-news></app-latest-news>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="videos px-4 pt-6 pb-3 mb-4 ml-4 mt-3 flex flex-column align-items-start w-3">
+                <h1 class="text-3xl line-height-2 font-family-bold font-bold pb-5">How-to Videos</h1>
+                <div class="flex flex-column align-items-center gap-4">
+                    <div class="video-each ">
+                        <video class="w-full" controls>
+                            <source src="assets/videos/big_buck_bunny.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="text-lg font-family-regular font-semibold py-3 line-height-1 border-bottom-2 border-color-greyish">The Telephone Connection Problem-Solving.</h2>
+                    </div>
+                    <div class="video-each ">
+                        <video class="w-full" controls>
+                            <source src="assets/videos/big_buck_bunny.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="text-lg font-family-regular font-semibold py-3 line-height-1 border-bottom-2 border-color-greyish">The Telephone Connection Problem-Solving.</h2>
+                    </div>
+                    <div class="video-each ">
+                        <video class="w-full" controls>
+                            <source src="assets/videos/big_buck_bunny.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="text-lg font-family-regular font-semibold py-3 line-height-1">The Telephone Connection Problem-Solving.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

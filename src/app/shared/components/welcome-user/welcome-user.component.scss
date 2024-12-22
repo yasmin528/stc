@@ -1,0 +1,11 @@
+@use '../../../../../public/assets/styles/variables' as *;
+@use '../../../../../public/assets/styles/reset' as *;
+
+.welcome-info{
+    h2{
+        color: $primary-color;
+    }
+}
+.welcome-btn{
+    background-color: $link-btn-color;
+}

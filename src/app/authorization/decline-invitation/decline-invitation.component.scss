@@ -1,0 +1,15 @@
+@use '../../../../public/assets/styles/variables' as *;
+@use '../../../../public/assets/styles/reset' as *;
+
+.declined-title{
+    color: $link-btn-color;
+}
+
+.declined-desc{
+    color: $secondary-font-color;
+}
+
+.decline-dialog i{
+    color: $link-btn-color;
+    cursor: pointer;
+}

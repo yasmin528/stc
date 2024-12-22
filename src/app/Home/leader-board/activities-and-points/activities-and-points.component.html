@@ -1,0 +1,15 @@
+<h1 class="font-family-regular mb-3 text-lg font-bold">How to gain points?</h1>
+<table >
+    <thead>
+      <tr class="flex flex-row justify-content-between border-bottom-1 p-3 border-color-greyish">
+        <th class="font-family-regular text-sm font-bold line-height-1 primary-font-color">Activity</th>
+        <th class="font-family-regular text-sm font-bold line-height-1 primary-font-color pr-7">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="flex flex-row justify-content-between align-items-center border-bottom-1 p-3 border-color-greyish font-family-regular text-base line-height-3 primary-font-color" *ngFor="let point of pointsArray">
+        <td >{{ point.activity }}</td>
+        <td class="primary-color font-bold w-2">{{ point.points }} points</td>
+      </tr>
+    </tbody>
+</table>  
