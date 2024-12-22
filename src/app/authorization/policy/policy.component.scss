@@ -1,0 +1,21 @@
+@use '../../../../public/assets/styles/variables' as *;
+@use '../../../../public/assets/styles/reset' as *;
+
+.policy-nav{
+    .policy-nav-accept-invitaion{
+       color: $link-btn-color;
+    }
+    .policy-nav-accept-policy ,i{
+        color: $secondary-font-color;
+    }
+}
+.terms{
+    background-color: $policy-background;
+    .terms-title p{
+        color: $secondary-font-color;
+    }
+}
+ 
+.accept-policy-btn{
+    background-color: $link-btn-color;
+}

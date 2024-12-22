@@ -1,0 +1,54 @@
+<section class="login grid grid-nogutter gap-8">
+    <div class="login-card flex flex-row col-11 md:col-10 lg:col-7 ml-3 mb-4 pb-5 pl-5 pr-5">
+        <img src="assets/images/avatar.png" class="border-circle align-self-center mr-3 mt-7">
+        <div class="login-card-info flex-grow-1 flex flex-column justify-content-center row-gap-2">
+            <p class="login-card-info-title font-bold text-3xl line-height-4">You are invited by</p>
+            <p class="login-card-info-name font-semibold text-2xl">Naser Mohammed A Almuhawwis</p>
+            <p class="login-card-info-job-title text-base pb-2">Solution and Technologies Section Manager</p>
+            <a href=""><span class="text-base">See Profile</span> <i class="pi pi-angle-right"></i></a>
+        </div>
+        <div class="login-card-actions flex flex-row align-items-center align-self-end">
+            <a routerLink="/declined" class="font-normal text-lg pr-3 line-height-3">Not interested?</a>
+            <button class="p-button border-round-md text-base font-medium line-height-2" (click)="showOTPDialog()">Accept Invitaion</button>
+        </div>
+    </div>
+    <div class="login-image-holder mr-2 col-11 md:col-10 lg:col-4 mt-8">
+        <img src="assets/images/pic1.png" alt="hands holding paper">
+    </div>
+</section>
+
+<p-dialog [(visible)]="displayOTPDialog" [modal]="true"class="OTP-dialog pt-7 pb-7 pl-6 pr-7 absolute top-50 left-50" [style]="{ width: '32rem' }" showHeader="false">
+    <i class="pi pi-times pt-5 text-left flex justify-content-end" style="font-size: 1.5rem" (click)="closeOTPDialog()"></i>      
+    <p class="OTP-dialog-title font-bold text-3xl pb-5 pt-5">Enter OTP</p>
+    <p class=" OTP-dialog-email text-base font-medium line-height-2 pb-6" >WE HAVE SENT AN EMAIL TO YOUR EMAIL ADDRESS <span class="font-bold block">ree..........&#64;stc.com.sa</span> </p>
+    <p-inputOtp [(ngModel)]="otpNum" class="pb-6">
+        <ng-template pTemplate="input" let-token let-events="events">
+            <input 
+                pInputText 
+                class="custom-otp-input" 
+                (input)="events.input($event)" 
+                (keydown)="events.keydown($event)" 
+                type="number" 
+                [ngClass]="{ 'filled': token > -1 , 'not-filled': !token }"
+                [attr.value]="token" />
+        </ng-template>
+    </p-inputOtp>
+    <a href="" class="font-bold text-base">RESEND THE CODE</a>
+    <button class="w-full mt-7 pt-4 pb-4 justify-content-center p-button border-round-md line-height-1 text-base" (click)="showServiceDialog()">VERIFY THE ACCOUNT</button>
+</p-dialog>
+
+<p-dialog [(visible)]="displayServiceDialog" [modal]="true"class="service-dialog pt-7 pb-7 pl-6 pr-7 absolute top-50 left-50" [style]="{ width: '32rem' }" showHeader="false">
+    <i class="pi pi-times pt-5 text-left flex justify-content-end" style="font-size: 1.5rem" (click)="closeServiceDialog()"></i>      
+    <p class="service-dialog-title font-bold text-3xl pb-3 pt-5">Select the services you use from stc</p>
+    <p class="service-dialog-list-title text-base font-medium line-height-2 pb-5" >Select from the below list</p>
+    <div *ngFor="let service of services" class="field-checkbox">
+        <p-checkbox 
+            class="pb-4 font-medium text-base"
+            [(ngModel)]="serviceSelected"
+            [label]="service" 
+            name="service" 
+            [value]="service" />
+    </div>
+    <button class="w-full mt-2 mb-5 pt-4 pb-4 justify-content-center p-button border-round-md line-height-1 text-base" routerLink="/policy">VERIFY THE ACCOUNT</button>
+    <a routerLink="/policy" class="font-bold text-base block text-center underline">Skip this step</a>
+</p-dialog>

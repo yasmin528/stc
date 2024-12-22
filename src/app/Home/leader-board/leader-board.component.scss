@@ -1,0 +1,37 @@
+@use '../../../../public/assets/styles/variables' as *;
+@use '../../../../public/assets/styles/reset' as *;
+
+.leader-menu a{
+    color: $primary-font-color;
+}
+.congrat-card-date{
+    color: $secondary-font-color;
+}
+.active{
+    font-weight: 700;
+    ::after{
+        content: "";
+        display: inline-block;
+        position: relative;
+        width: 40%;
+        height: 1px;
+        bottom: 0;
+        border-bottom: 2px solid $link-btn-color;
+    }
+}
+.gift{
+    background-color: $primary-color;
+    color: $third-font-color;
+    .gift-point {
+        color: $badge-point-color;
+    }
+}
+
+.content{
+    margin-bottom: 2%;
+}
+
+.share-dialog i{
+    color: $link-btn-color;
+    cursor: pointer;
+}

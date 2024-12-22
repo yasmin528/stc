@@ -1,0 +1,15 @@
+@use '../../../../public/assets/styles/variables' as *;
+@use '../../../../public/assets/styles/reset' as *;
+
+a{
+    color: $primary-font-color;
+}
+.home-menu .active{
+    font-weight: 700;
+    padding-right: 2rem;
+    border-bottom: 2px solid $link-btn-color;
+}
+.videos{
+    background-color: $policy-background;
+    height: fit-content;
+}

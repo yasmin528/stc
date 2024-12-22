@@ -1,0 +1,20 @@
+<div class="flex flex-row my-6 pl-7 gap-5 border-bottom-3 pb-3 border-color-greyish w-full">
+    <img class="border-circle align-self-start" src="assets/images/avatar.png" alt="avatar">
+    <div class="welcome-info flex-grow-1 align-self-center ">
+        <h2 class="ml-3 text-4xl font-bold font-family-regular line-height-2">Welcome,</h2>
+        <p class="ml-3 text-3xl font-family-regular line-height-4">Naser Mohammed A Almuhawwis</p>
+        <ng-container  *ngIf="page==='home'">
+            <div class="premium flex flex-row align-items-center">
+                <img src="assets/images/master 1.png" alt="premium">
+                <span class="font-family-regular font-medium text-2xl line-height-2 link-color">Premium</span>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="page==='leader'">
+            <div class="premium flex flex-row align-items-center" >
+                <img src="assets/images/achievement-124188.png" alt="achievement" class="h-3rem mx-2 ">
+                <span class="font-family-regular font-medium text-2xl line-height-2 primary-color">Beginner User</span>
+            </div>
+        </ng-container>
+    </div>
+    <button class="welcome-btn p-button text-base font-medium line-height-1 align-self-start font-family-regular">View Ambassador Account</button>
+</div>

@@ -1,0 +1,15 @@
+<section class="declined flex flex-column align-items-center">
+    <img src="assets/images/declineInvitation.png" alt="decline Invitation">
+    <p class="declined-title line-height-4 font-medium text-6xl"><span class="block text-center">Whoops!</span> Your invitaion has expired</p>
+    <p class="declined-desc line-height-3 text-5xl">Your invitaion has expired due to your inactivity</p>
+</section>
+
+<p-dialog [(visible)]="displayDeclineDialog" [modal]="true"class="decline-dialog pt-7 pb-7 pl-6 pr-7 absolute top-50 left-50" [style]="{ width: '32rem' }" showHeader="false">
+    <i class="pi pi-times pt-5 text-left flex justify-content-end" style="font-size: 1.5rem" (click)="closeDeclineDialog()"></i>
+    <div class="flex flex-column gap-5">
+        <p class="font-family-regular font-bold text-4xl primary-font-color">Are you sure!</p>
+        <p class="font-family-regular text-base line-height-2 font-secondary-color">Do you want to reject the invitation?<span class="block">Once you exit you can’t join again.</span></p>
+        <textarea name="declineReason" id="declineReason" class="border-1 border-color-greyish w-full h-7rem"></textarea>
+        <button class="p-button text-base font-medium line-height-2 button-background block mr-0 w-4 align-self-end mt-3" (click)="declineInvite()">CONFIRM</button> 
+    </div>
+</p-dialog>

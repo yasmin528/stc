@@ -1,0 +1,30 @@
+@use '../../public/assets/styles/variables' as *;
+
+nav{
+    background-color: $primary-color;   
+    .nav-menu{
+        color: $third-font-color;
+    } 
+}
+
+.toggle-menu{
+    top: 6%;
+    right: 0;
+    z-index: 2;
+    width: 22%;
+}
+.toggle-menu-list {
+    li{
+        a{
+            color: $third-font-color;
+            text-decoration: none;
+            display: block;
+            line-height: 3rem;
+        }
+        :hover{
+            background-color: $primary-color-active;
+            cursor: pointer;
+        }
+    }
+    
+}
