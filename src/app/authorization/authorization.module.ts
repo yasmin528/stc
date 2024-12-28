@@ -9,7 +9,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RouterModule } from '@angular/router';
 import { PolicyComponent } from './policy/policy.component';
 import { DeclineInvitationComponent } from './decline-invitation/decline-invitation.component';
-import { PolicyGuard } from './policy/policy.guard';
+import { PolicyGuard } from '../../core/guards/policy.guard';
 
 @NgModule({
   declarations: [

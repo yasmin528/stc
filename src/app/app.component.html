@@ -6,22 +6,26 @@
     </div>
     <div class="nav-menu flex flex-row gap-4 align-items-center" *ngIf="displayMenu">
         <i class="pi pi-bell gap-1 pr-3 h-4rem border-right-3 pt-4"></i>
-        <div class="flex flex-row align-items-center gap-1 pr-3 h-4rem border-right-3">
-            <span class="font-family-regular text-sm font-medium">العربية</span>
+        <div class="flex flex-row align-items-center gap-1 pr-3 h-4rem border-right-3 cursor-pointer" (click)="changeLanguage()">
+            <span class="font-family-regular text-sm font-medium">{{ 'NAV.LANGUAGE' | translate }}</span>
             <i class="pi pi-globe block"></i>
         </div>
         <div class="flex flex-row align-items-center gap-1 ">
-            <span class="font-family-regular text-sm font-medium">Naser Mohammed</span>
+            <span class="font-family-regular text-sm font-medium">{{ 'NAV.USER_MENU.NAME' | translate }}</span>
             <i class="pi pi-chevron-down ml-1 cursor-pointer" (click)="menuToggole()"></i>
-            <div *ngIf="toggleMenu" class="toggle-menu primary-color-background text-xl line-height-2 font-family-regular fixed  pt-3 px-1 pb-2 border-round-xl">
-                <p class=" font-bold pl-4">Naser Mohammed<span class="inline-block font-normal border-round-2xl ml-3 p-2 button-background text-lg">1407 points</span></p>
-                <p class=" font-bold pl-4">Premium</p>
+            <div *ngIf="toggleMenu" class="toggle-menu primary-color-background text-xl line-height-2 font-family-regular fixed  pt-3 px-1 pb-2 border-round-xl" 
+            [ngStyle]="{
+                'right': (currentLang === 'ar' ) ? 'auto' : '0',
+                'left': (currentLang === 'ar' ) ? '0' : 'auto'
+              }">
+                <p class=" font-bold px-4">{{ 'NAV.USER_MENU.NAME' | translate }}<span class="inline-block font-normal border-round-2xl ml-3 p-2 button-background text-lg">{{ 'NAV.USER_MENU.TOGGLE_MENU.POINTS_LABEL' | translate }}</span></p>
+                <p class=" font-bold px-4">{{ 'NAV.USER_MENU.TOGGLE_MENU.STATUS_LABEL' | translate }}</p>
                 <hr class="border-color-greyish">
                 <ul class="toggle-menu-list list-none pl-4">
-                    <li><a href="">My Account</a></li>
-                    <li><a href="">My Settings</a></li>
-                    <li><a href="">My Activity</a></li>
-                    <li><a (click)="logout()">Logout</a></li>
+                    <li><a href="">{{ 'NAV.USER_MENU.TOGGLE_MENU.OPTIONS.ACCOUNT' | translate }}</a></li>
+                    <li><a href="">{{ 'NAV.USER_MENU.TOGGLE_MENU.OPTIONS.SETTINGS' | translate }}</a></li>
+                    <li><a href="">{{ 'NAV.USER_MENU.TOGGLE_MENU.OPTIONS.ACTIVITY' | translate }}</a></li>
+                    <li><a (click)="logout()">{{ 'NAV.USER_MENU.TOGGLE_MENU.OPTIONS.LOGOUT' | translate }}</a></li>
                 </ul>
             </div>
         </div>

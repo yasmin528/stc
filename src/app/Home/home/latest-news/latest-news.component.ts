@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LatestNewsService } from './latest-news.service';
+import { LatestNewsService } from '../../../../core/services/latest-news.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-latest-news',
@@ -9,7 +10,7 @@ import { LatestNewsService } from './latest-news.service';
   styleUrl: './latest-news.component.scss'
 })
 export class LatestNewsComponent implements OnInit{
-  constructor(private latestNewsService : LatestNewsService){}
+  constructor(private latestNewsService : LatestNewsService,public translate:TranslateService){}
   ngOnInit(): void {
     this.latestNewsService.getLatestNews().subscribe({
       next : news =>{

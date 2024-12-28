@@ -8,6 +8,9 @@ import { DialogModule } from 'primeng/dialog';
 import { TrendComponent } from '../Home/home/trend/trend.component';
 import { FollowedTopicsComponent } from '../Home/home/followed-topics/followed-topics.component';
 import { LatestNewsComponent } from '../Home/home/latest-news/latest-news.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,17 @@ import { LatestNewsComponent } from '../Home/home/latest-news/latest-news.compon
   ],
   imports: [
     SharedModule,
-    DialogModule
+    DialogModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ]
 })
 export class HomeModule { }
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
+}

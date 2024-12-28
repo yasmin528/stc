@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-aside-nav',
@@ -9,15 +10,16 @@ import { Component, Input } from '@angular/core';
 })
 export class AsideNavComponent {
   menuItems = [
-    { name: 'Home', link: '' },
-    { name: 'Discover Tafani', link: '' },
-    { name: 'Community', link: '' },
-    { name: 'Products & Services', link: '' },
-    { name: 'Feedback', link: '' },
-    { name: 'FAQs', link: '' },
-    { name: 'Leaderboard', link: '/leaderBoard' },
+    { name: 'HOME', link: '' },
+    { name: 'DISCOVER_TAFANI', link: '' },
+    { name: 'COMMUNITY', link: '' },
+    { name: 'PRODUCTS_SERVICES', link: '' },
+    { name: 'FEEDBACK', link: '' },
+    { name: 'FAQS', link: '' },
+    { name: 'LEADERBOARD', link: '/leaderBoard' },
   ];
-
+  
+  constructor(public translate:TranslateService){}
   @Input() activeIndex = 0; 
 
   setActive(index: number) {

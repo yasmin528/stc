@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IPolicy } from './policyModel';
+import { IPolicy } from '../../app/authorization/policy/policyModel';
 import { catchError, Observable,  throwError } from 'rxjs';
 
 @Injectable({

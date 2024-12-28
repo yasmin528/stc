@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './badge-points.component.scss'
 })
 export class BadgePointsComponent {
+  isRTL(): boolean {
+    return document.documentElement.dir === 'rtl';
+  }
 }

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IPolicy } from './policyModel';
-import { PolicyService } from './policy.service';
+import { PolicyService } from '../../../core/services/policy.service';
 import { Router } from '@angular/router';
 
 @Component({

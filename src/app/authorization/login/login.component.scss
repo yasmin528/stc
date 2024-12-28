@@ -13,8 +13,7 @@ button{
     background-size: cover;
     background-position: bottom right;
     padding-bottom: 240px;
-}
-
+    
 .login-image-holder{
     background-color: $primary-color;
     height: 533px;
@@ -50,6 +49,8 @@ button{
         }
     }
 }
+}
+
 
 .OTP-dialog{
     .OTP-dialog-title{

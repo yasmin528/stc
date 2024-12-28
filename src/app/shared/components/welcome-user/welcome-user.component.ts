@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-welcome-user',
@@ -9,4 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 export class WelcomeUserComponent {
   @Input() page = 'home';
+  constructor(public translate:TranslateService){}
 }
