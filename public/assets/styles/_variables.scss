@@ -1,0 +1,60 @@
+@import url("https://db.onlinewebfonts.com/c/54c992b8b8dcf71d1ba214729fcd9737?family=STC+Forward+ExtraBold");
+@import url("https://db.onlinewebfonts.com/c/1545e0a0d58caedb845e5884d5cfc762?family=STC+Forward+Bold");
+@import url('https://db.onlinewebfonts.com/c/157bc09a1cd0a9c9a52fe4287c0e1d31?family=STC+Forward+Regular');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+$font-family-regular: "STC Forward Regular", serif;
+$font-family-bold: "STC Forward Bold", serif;
+$font-family-extraBold: "STC Forward ExtraBold", serif;
+$font-pro-display: 'SF Pro Display', sans-serif;
+
+$background-color: #ffffff;
+$primary-color: #4F008C;
+$primary-color-active: #420374;
+$link-btn-color:  #FF375E;
+$input-background: #D8D8D833;
+$policy-background:#F3F3F1;
+
+$primary-font-color: #000000;
+$secondary-font-color: #8E9AA0;
+$third-font-color: #ffffff;
+
+$border-color: #E8E8E8;
+$badge-point-color:#00C48C;
+
+.font-family-regular{
+    font-family: $font-family-regular;
+}
+.font-family-bold{
+    font-family: $font-family-bold;
+}
+
+.font-family-extra-bold{
+    font-family: $font-family-extraBold;
+}
+
+.font-pro-display{
+    font-family: $font-pro-display;
+}
+.border-color-greyish{
+    border-color: $border-color;
+}
+
+.primary-color-background{
+    background-color: $primary-color;
+}
+.button-background{
+    background-color: $link-btn-color;
+}
+.link-color{
+    color: $link-btn-color;
+}
+.primary-color{
+    color: $primary-color !important;
+}
+.font-secondary-color{
+    color: $secondary-font-color;
+}
+.primary-font-color{
+    color: $primary-font-color;
+}

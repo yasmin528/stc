@@ -1,0 +1,22 @@
+<section class="policy mt-6 flex flex-column">
+    <div class="policy-nav ml-6 mb-6">
+        <a routerLink="/"class="policy-nav-accept-invitaion text-xl font-medium">Accept Invitation</a>
+        <i class="pi pi-angle-right"></i>
+        <a href="/policy" class="policy-nav-accept-policy text-xl font-medium">Accept Terms & Conditions</a>
+    </div>
+    <div class="terms p-6 mx-auto w-10">
+        <div class="terms-title mb-8">
+            <h1 class="text-6xl line-height-4 font-family-regular font-medium">Accept Terms & Condition</h1>
+            <p class="text-lg line-height-1 font-family-regular font-normal">Read and Accept the Terms & Conditions for continue to proceed.</p>
+        </div>
+        <div class="terms-each mb-6" *ngFor="let term of terms;let i = index">
+            <h1 class="text-4xl line-height-4 font-family-regular font-medium">{{i+1}}.<span class="ml-3">{{term.title}}</span></h1>
+            <div class="terms-each-description flex flex-column gap-7" *ngFor="let desc of term.description">   
+                <p class="text-2xl line-height-3 font-family-regular font-normal">
+                   {{desc}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <button class="accept-policy-btn p-button border-round-md text-base font-medium line-height-2 align-self-end mt-8 mr-8 mb-8 text-sm font-family-regular font-bold" (click)="policyAccepted()">Accept and Continue</button>
+</section>

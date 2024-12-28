@@ -1,0 +1,72 @@
+<section class="flex">
+    <app-aside-nav [activeIndex]="6"></app-aside-nav>
+    <div class="w-full px-5">
+        <div>
+            <app-welcome-user [page]="'leader'"></app-welcome-user>
+        </div>
+        <div class="flex flex-row ml-7 gap-7 justify-content-between">
+            <div class="flex flex-column">
+                <div>
+                    <h2 class="font-family-regular text-2xl line-height-1 font-bold line-height-4">{{ 'LEADERBOARD.TITLE' | translate }}</h2>
+                    <p class="font-family-regular line-height-2 text-base">{{ 'LEADERBOARD.DESCRIPTION' | translate }}</p>
+                </div>
+                <div class="congrat-card flex flex-row align-items-center gap-4 px-3 py-2 my-5 border-1 border-color-greyish border-round-lg">
+                    <img src="assets/images/achievement-124188.png" alt="achievement">
+                    <div class="congrat-card-info flex-grow-1">
+                        <p class="text-xl font-family-regular font-bold line-height-3">
+                            <span class="block">{{ 'LEADERBOARD.CONGRATS' | translate }}</span>{{ 'LEADERBOARD.BEGINNER_LEVEL' | translate }}
+                        </p>
+                        <p class="congrat-card-date line-height-2 text-base">{{ 'LEADERBOARD.DATE' | translate }}</p>
+                    </div>
+                    <button class="p-button border-round-md text-base font-medium line-height-2 button-background" (click)="openShareDialog()">
+                        <svg class="mx-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0V6C3 6 0 12.15 0 21C1.56 15.06 6 12 12 12H15V18L24 8.52L15 0Z" fill="white"/>
+                        </svg>
+                        {{ 'LEADERBOARD.SHARE_BUTTON' | translate }}
+                    </button>
+                </div>
+                <div class="mt-3">
+                    <div class="leader-menu">
+                        <ul class="list-none pl-0 text-xl flex flex-row gap-5 line-height-2 font-family-regular font-medium">
+                            <li *ngFor="let item of menuItems; let i = index" [class.active]="activeIndex === i" (click)="setActive(i)">
+                                <a>{{ 'LEADERBOARD.' + item | translate }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gift flex flex-row align-items-center pt-2 h-11rem w-30rem" >
+                <img src="assets/images/gift 1.png" alt="gift">
+                <div>
+                    <p class="font-family-regular font-bold text-base line-height-3">{{ 'LEADERBOARD.MY_POINTS.TITLE' | translate }}</p>
+                    <p class="gift-point font-family-regular font-bold text-sm line-height-3"><span class="text-4xl pr-2">{{ 'LEADERBOARD.MY_POINTS.POINTS' | translate }}</span></p>
+                    <p class="font-family-regular text-sm line-height-3">{{ 'LEADERBOARD.MY_POINTS.LAST_UPDATED' | translate }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="content mt-5 mx-7">
+            <ng-container *ngIf="activeIndex === 0">
+                <app-activities-and-points></app-activities-and-points>
+            </ng-container>
+            <ng-container *ngIf="activeIndex === 1">
+                <app-badge-points></app-badge-points>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<p-dialog [(visible)]="displayShareDialog" [modal]="true" class="share-dialog absolute top-50 left-0 pt-7 pb-7 pl-6 pr-7" [style]="{ width: '40rem' }" showHeader="false">
+    <i class="pi pi-times pt-5 text-left flex justify-content-end" style="font-size: 1.5rem" (click)="closeShareDialog()"></i>
+    <h1 class="primary-font-color font-family-regular text-4xl w-8 font-bold line-height-3">{{ 'LEADERBOARD.DIALOG.TITLE' | translate }}</h1>
+    <div class="flex flex-column justify-content-between gap-3 pr-1 pt-4 pl-4 pb-5 border-1 border-color-greyish my-5 font-family-regular text-2xl font-medium primary-font-color  line-height-2">
+        <p>{{ 'LEADERBOARD.DIALOG.TEXT_1' | translate }}<span class="link-color"> {{ 'LEADERBOARD.DIALOG.TAFANI_MEMBER' | translate }}</span> {{ 'LEADERBOARD.DIALOG.STC_COMMUNITY' | translate }} </p>
+        <p>{{ 'LEADERBOARD.DIALOG.TEXT_2' | translate }}</p>
+        <p>{{ 'LEADERBOARD.DIALOG.TEXT_3' | translate }}</p>
+        <p class="primary-color">{{ 'LEADERBOARD.DIALOG.HASHTAGS' | translate }}</p>
+    </div>
+    <button class="p-button border-round-md text-lg font-medium line-height-2 button-background w-11 block text-center" (click)="shareBtn()">
+        {{ 'LEADERBOARD.DIALOG.SHARE_BUTTON' | translate }}
+    </button>
+    <a href="" class="primary-font-color underline text-lg font-medium line-height-2 w-11 block text-center pt-5">{{ 'LEADERBOARD.DIALOG.BACK_BUTTON' | translate }}</a>
+</p-dialog>

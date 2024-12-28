@@ -1,0 +1,143 @@
+{
+  "NAV": {
+    "LANGUAGE": "العربية",
+    "USER_MENU": {
+      "NAME": "Naser Mohammed",
+      "TOGGLE_MENU": {
+        "POINTS_LABEL": "1407 points",
+        "STATUS_LABEL": "Premium",
+        "OPTIONS": {
+          "ACCOUNT": "My Account",
+          "SETTINGS": "My Settings",
+          "ACTIVITY": "My Activity",
+          "LOGOUT": "Logout"
+        }
+      }
+    }
+  },
+  "SIDE_NAV": {
+    "HOME": "Home",
+    "DISCOVER_TAFANI": "Discover Tafani",
+    "COMMUNITY": "Community",
+    "PRODUCTS_SERVICES": "Products & Services",
+    "FEEDBACK": "Feedback",
+    "FAQS": "FAQs",
+    "LEADERBOARD": "Leaderboard"
+  },
+  "WELCOME": {
+    "WELCOME": "Welcome,",
+    "USER_NAME": "Naser Mohammed A Almuhawwis",
+    "PREMIUM": "Premium",
+    "BEGINNER_USER": "Beginner User",
+    "VIEW_AMBASSADOR_ACCOUNT": "View Ambassador Account"
+  },
+  "HOME": {
+    "MENU_ITEMS": {
+      "TREND": "Trend",
+      "FOLLOWED_TOPICS": "Followed Topics",
+      "LATEST_NEWS": "Latest News"
+    },
+    "VIDEOS": {
+      "TITLE": "How-to Videos",
+      "VIDEO_1_TITLE": "The Telephone Connection Problem-Solving"
+    },
+    "TREND": {
+      "USER_NAME": "Faisal Abullah Almutairi ",
+      "ADDED_QUESTION": "Added a question on ",
+      "ADDED_SURVEY":"Created a survey on ",
+      "DATE1":"18 May 2022",
+      "DATE2":"17 April 2022",
+      "TAFANI_MEMBER": "Tafani Member ",
+      "FOLLOWING": "Following",
+      "FOLLOW":"Follow",
+      "REACT":"23.5K",
+      "LIKES":"3.5K",
+      "COMMENTS":"2K",
+      "SHARE_ANSWER": "Share your answer",
+      "VIEW_SURVEY":"View Survey"
+    },
+    "FOLLOWED_TOPICS":{
+      "QUESTION_POSTED": "A tafani member has posted new question",
+      "AUTHOR": {
+        "NAME": "Faisal Abullah Almutairi",
+        "FOLLOWING": "Following"
+      },
+      "ANSWER":"Answer",
+      "QUESTION": {
+        "DETAILS":"Question details",
+        "TEXT1": "Is it possible to demand a verification that the level of radiation emanating from a telecommunications tower complies with the regulations approved by CITC?",
+        "TEXT2":"Here we can have, Jawwy TV Home you will get free basic package, and you will gain access to 70-free-to-air channnels and 40 encrypted channels, in addition to variety package"
+      },
+      "FAILSEL_REACT":"Faisal Reacted on this answer",
+      "SHARED_ANSWER":"Tafani member has shared his answer on this question",
+      "INSIGHTS":"Insights",
+      "REACTIONS":"27 reactions",
+      "CATEGORY": "Mobile",
+      "CATEGORY_KIND":"Bills",
+      "REPORT_ANSWER": "Report this answer",
+      "TAFANI_MEMBER": "tafani"
+    }  
+  }, 
+  "LEADERBOARD": {
+    "TITLE": "Your Leaderboard",
+    "DESCRIPTION": "Your verified achievements in the global community can help you get recognized and stand out at your workplace.",
+    "CONGRATS": "Congrats! 🎉",
+    "BEGINNER_LEVEL": "You’ve earned Beginner level",
+    "DATE": "29 May 2022",
+    "SHARE_BUTTON": "Share in community",
+    "DIALOG": {
+    "TITLE": "You can now share your achievement",
+    "TEXT_1": "Today, I am happy to earn the",
+    "TAFANI_MEMBER": "Tafani user badge",
+    "STC_COMMUNITY": "at stc Community 🎉",
+    "TEXT_2": "I am happy being part of this creative community!",
+    "TEXT_3": "stc is a platform where you can meet great people to help you out through answering your questions, have valuable conversations with them, share your ideas and voice, and gain experience from their feedback.",
+    "HASHTAGS": "#stc #community #badges #tafani",
+    "SHARE_BUTTON": "Share to the community",
+    "BACK_BUTTON": "Back to my account"
+    },
+    "MY_POINTS": {
+        "TITLE": "My Points",
+        "POINTS": "32,000 Points",
+        "LAST_UPDATED": "Last updated on 29 Jun 2022"
+    },
+    "ACTIVITIES_AND_POINTS": "Activities and Points",
+    "BADGE_POINTS": "Badge Points",
+    "ACTIVITIES_AND_POINTS_PAGE":{
+        "HOW_TO_GAIN_POINTS": "How to Gain Points ?",
+        "ACTIVITY": "Activity",
+        "ACTIVITY_ASK_QUESTION": "Ask a Question",
+        "ACTIVITY_SUBMIT_SURVEY": "Submit a Survey",
+        "ACTIVITY_FOLLOW_MEMBER": "Follow a New Member",
+        "ACTIVITY_ANSWER_QUESTION": "Answer a Question",
+        "ACTIVITY_FIRST_LOGIN": "First Login",
+        "ACTIVITY_ADD_FEEDBACK": "Add Feedback/Idea",
+        "ACTIVITY_REPLY_ANSWER": "Reply an Answer",
+        "ACTIVITY_REACT_ANSWER": "React on Answer/Reply",
+        "POINTS_LABEL": "Points"
+    },
+    "BADGE_POINTS_PAGE": {
+        "LEVEL": "Level",
+        "ELIGIBLE_FOR": "Eligible for",
+        "BEGINNER_USER": "Beginner User",
+        "ADVANCED_USER": "Advanced User",
+        "INFLUENCER": "Influencer",
+        "TAFANI_USER": "Tafani User",
+        "POINTS_RANGE_BEGINNER": "0 to 99 pts",
+        "POINTS_RANGE_ADVANCED": "1,000 - 4,999 pts",
+        "POINTS_RANGE_INFLUENCER": "5,000 - 9,999 pts",
+        "POINTS_RANGE_TAFANI": "10,000+ pts",
+        "ELIGIBLE_REWARDS_BEGINNER": "Points, Qitaf points, Badge, Leaderboard",
+        "ELIGIBLE_REWARDS_ADVANCED": "Points, Badge, Leaderboard, Qitaf points, Certificate of Achievement",
+        "ELIGIBLE_REWARDS_INFLUENCER": "Points, Badge, Leaderboard, Qitaf points, Certificate of Achievement, Easter Eggs, Service Discounts",
+        "ELIGIBLE_REWARDS_TAFANI": "Points, Badge, Leaderboard, Qitaf points, Certificate of Achievement, Easter Eggs, Service Discounts, Leadership kudos",
+        "EARNED_BADGE": "Earned badge",
+        "COMING_BADGE": "Coming badge",
+        "ALT_ACHIEVEMENT": "Achievement badge",
+        "ALT_MEDAL": "Medal",
+        "ALT_CUP": "Cup",
+        "ALT_AWARD": "Award"
+    }      
+  }
+
+}

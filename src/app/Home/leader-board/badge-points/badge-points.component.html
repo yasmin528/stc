@@ -1,0 +1,60 @@
+<table class="w-full">
+    <thead>
+        <tr class="flex flex-row border-bottom-1 p-3 border-color-greyish  font-bold w-full justify-between gap-4 "[ngClass]="{'text-right': isRTL(), 'text-left': !isRTL()}">
+            <th class="flex-1">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.LEVEL' | translate }}</th>
+            <th class="flex-1">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ELIGIBLE_FOR' | translate }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="flex flex-row  align-items-center gap-4 border-bottom-1 p-3 border-color-greyish font-family-regular text-base line-height-3 primary-font-color justify-between w-full">
+            <td class="flex-1 flex flex-row align-items-start gap-3">
+                <img src="assets/images/achievement-124188.png" alt="{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ALT_ACHIEVEMENT' | translate }}" class="w-3rem">
+                <div>
+                    <p class="font-family-regular font-medium line-height-1 primary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.BEGINNER_USER' | translate }}</p>
+                    <p class="font-family-regular text-base line-height-2 font-secondary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.POINTS_RANGE_BEGINNER' | translate }}</p>
+                </div>
+                <p class="p-1 border-round-3xl border-1 earned-badge text-sm">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.EARNED_BADGE' | translate }}</p>
+            </td>
+            <td class="flex-1 font-family-regular text-xl">
+                {{ 'LEADERBOARD.BADGE_POINTS_PAGE.ELIGIBLE_REWARDS_BEGINNER' | translate }}
+            </td>
+        </tr>
+        <tr class="flex flex-row  align-items-center gap-4 border-bottom-1 p-3 border-color-greyish font-family-regular text-base line-height-3 primary-font-color justify-between w-full">
+            <td class="flex-1 flex flex-row align-items-start gap-3">
+                <img src="assets/images/medal-124197.png" alt="{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ALT_MEDAL' | translate }}" class="w-3rem">
+                <div>
+                    <p class="font-family-regular font-medium line-height-1 primary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ADVANCED_USER' | translate }}</p>
+                    <p class="font-family-regular text-base line-height-2 font-secondary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.POINTS_RANGE_ADVANCED' | translate }}</p>
+                </div>
+                <p class="p-1 border-round-3xl border-1 coming-badge text-sm">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.COMING_BADGE' | translate }}</p>
+            </td>
+            <td class="flex-1 font-family-regular text-xl">
+                {{ 'LEADERBOARD.BADGE_POINTS_PAGE.ELIGIBLE_REWARDS_ADVANCED' | translate }}
+            </td>
+        </tr>
+        <tr class="flex flex-row  align-items-center gap-4 border-bottom-1 p-3 border-color-greyish font-family-regular text-base line-height-3 primary-font-color justify-between w-full">
+            <td class="flex-1 flex flex-row align-items-start gap-3">
+                <img src="assets/images/cup-124193.png" alt="{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ALT_CUP' | translate }}" class="w-3rem">
+                <div>
+                    <p class="font-family-regular font-medium line-height-1 primary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.INFLUENCER' | translate }}</p>
+                    <p class="font-family-regular text-base line-height-2 font-secondary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.POINTS_RANGE_INFLUENCER' | translate }}</p>
+                </div>
+            </td>
+            <td class="flex-1 font-family-regular text-xl">
+                {{ 'LEADERBOARD.BADGE_POINTS_PAGE.ELIGIBLE_REWARDS_INFLUENCER' | translate }}
+            </td>
+        </tr>
+        <tr class="flex flex-row  align-items-center gap-4 border-bottom-1 p-3 border-color-greyish font-family-regular text-base line-height-3 primary-font-color justify-between w-full">
+            <td class="flex-1 flex flex-row align-items-start gap-3">
+                <img src="assets/images/award-124191.png" alt="{{ 'LEADERBOARD.BADGE_POINTS_PAGE.ALT_AWARD' | translate }}" class="w-3rem">
+                <div>
+                    <p class="font-family-regular font-medium line-height-1 primary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.TAFANI_USER' | translate }}</p>
+                    <p class="font-family-regular text-base line-height-2 font-secondary-color">{{ 'LEADERBOARD.BADGE_POINTS_PAGE.POINTS_RANGE_TAFANI' | translate }}</p>
+                </div>
+            </td>
+            <td class="flex-1 font-family-regular text-xl">
+                {{ 'LEADERBOARD.BADGE_POINTS_PAGE.ELIGIBLE_REWARDS_TAFANI' | translate }}
+            </td>
+        </tr>
+    </tbody>
+</table>
